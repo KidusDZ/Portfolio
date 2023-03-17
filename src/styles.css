@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .pack{
+     scroll-snap-type: y mandatory;
+    overflow-y: scroll; 
+    height: 100vh;
+    background-color: #FDEFE8;
+   
+} */
+
+.video {
+  background-color: #282d33;
+}
+/* .section{
+    scroll-snap-align: start;
+} */
+.ul {
+  @apply hidden
+    md:flex;
+}
+.li {
+  @apply relative 
+    md:text-black
+    font-text;
+}
+.buton_nav {
+  @apply py-2
+    px-5
+    rounded-xl
+    font-header
+    hover:bg-rose-600
+    bg-rose-300
+    text-white
+    /* md:right-0
+    right-9
+    fixed */
+    transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300;
+}
+.nav {
+  @apply p-2 flex
+    justify-center 
+    /* bg-[#FDEFE8]
+    bg-opacity-95; */;
+}
+.float1 img {
+  animation: fadeInFromTop1 0.5s linear forwards,
+    floating1 ease 10s infinite;
+}
+
+@keyframes fadeInFromTop1 {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating1 {
+  0% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+  25% {
+    transform: translate(25%, 0%) rotate(360deg);
+  }
+  50% {
+    transform: translate(30%, 5%) rotate(360deg);
+  }
+  75% {
+    transform: translate(0%, 25%) rotate(360deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+
+.float img {
+  animation: fadeInFromTop 0.5s linear forwards,
+    floating ease 10s infinite;
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+  25% {
+    transform: translate(0%, 15%) rotate(360deg);
+  }
+  50% {
+    transform: translate(5%, 15%) rotate(360deg);
+  }
+  75% {
+    transform: translate(0%, 10%) rotate(360deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+
+.vid {
+  @apply rounded-full
+        w-48
+        h-48
+        m-0
+        p-0;
+}
+.box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.img {
+  transition: all linear 0.7s;
+}
+img.hovervid {
+  position: absolute;
+  opacity: 0;
+  transition: all linear 0.7s;
+}
+.box:hover img {
+  opacity: 0;
+}
+.box:hover img.hovervid {
+  opacity: 1;
+}
+/* .name{
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    background: url(assets/snow.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 700px 0;
+    }
+} */
+
+.kidus {
+  @apply text-xl
+    text-black
+    font-logo;
+}
+li:after {
+  content: '';
+  position: absolute;
+  background-color: #dcad95;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+li:hover {
+  color: #dcad95;
+}
+li:hover:after {
+  width: 100%;
+}
+.text {
+  color: #dcad95;
+}
+.glass {
+  background: linear-gradient(135deg, #a1c9ee, #c6bdbe);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: full;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.glass1 {
+  background: linear-gradient(135deg, #dcad95, #fdefe8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: full;
+}
